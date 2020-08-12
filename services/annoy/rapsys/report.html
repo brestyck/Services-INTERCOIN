@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+  <meta charset="utf-8">
+    <h1><font color="FireBrick">Обращение</font></h1>
+</head>
+<body bgcolor="DarkSlateGray">
+<form action="repsend.php" method="post">
+  <label for="fname"><font color="FireBrick">Имя: </font></label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="contact"><font color="FireBrick" size="4">Контактные данные (по желанию)</font> </label>
+  <input type="text" id="contact" name="contact"><br><br>
+  <input type="checkbox" id="anon" name="anon"><font color="FireBrick"> Я хочу остаться анонимным </font><br>
+     <p><b><font size="4" color="FireBrick"> Какого плана ваша проблема?</font></b></p>
+  <p><input name="reason" type="radio" value="bytproblem"><font color="FireBrick">Бытовая проблема</font></p>
+  <p><input name="reason" type="radio" value="conflict"><font color="FireBrick">Конфликт</font></p>
+  <p><input name="reason" type="radio" value="other" checked><font color="FireBrick">Другое</font></p>
+  <label for="guilty"><font color="FireBrick" size="4">Укажите причастных:</font> </label><br>
+  <input type="text" id="guilty" name="guilty"><br><br>
+  <p><b><font color="FireBrick" size="4">Вкратце опишите ситуацию</font> </b></p>
+  <textarea name="matter"></textarea><br><br>
+  <input type="submit" value="Подтвердить и отправить на рассмотрение">
+</form>
+</body>
+</html>

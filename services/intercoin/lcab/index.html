@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>INTERCOIN</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+        <link rel="stylesheet" href="refstyle.css">
+    </head>
+    <body background="back.png">
+        <script>
+            var params = window
+    .location
+    .search
+    .replace('?','')
+    .split('&')
+    .reduce(
+        function(p,e){
+            var a = e.split('=');
+            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+            return p;
+        },
+        {}
+    );
+    function show_balance(){
+        alert("Номер счёта "+params["wallet_id"]+", на вашем счету: "+params["money"]+" IC");
+    }
+        alert("Номер счёта: "+params["wallet_id"]+", на вашем счету: "+params["money"]+" IC");
+        </script>
+        <div class="center">
+        <div class="one"><h1>INTERCOIN</h1></div>
+        <div class="header-h1"><h2>Ваш личный кабинет</h2></div><br>
+        <form name="perevod" action="send.php" method="POST">
+            <div class="center">
+                <label for="your_wallet">Подтвердите ваш номер кошелька</label><br><br>
+                <input type="password" name="your_wallet" id="your_wallet"><br><br>
+                <label for="sum">Укажите сумму перевода</label><br><br>
+                <input type="number" name="sum" id="sum"><br><br>
+                <label for="recipient">Укажите кошелек получателя</label><br><br>
+                <input type="password" name="recipient" id="recipient"><br><br>
+                <p><font color="red">Комиссия 1% на ВСЕ переводы!</font></p>
+                <input type="submit" class="userbutton">
+            </div>
+        </form>
+        <button class="userbutton" onclick="show_balance()">Посмотреть баланс</button>
+        <br><br>
+        <button class="userbutton" onclick="history.back()">Назад</button><br><br>
+        <a href="../index.html" class="userbutton">На главную</a>
+        </div>
+    </body>
+</html>

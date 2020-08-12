@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Продажа</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css-content/gurman.css">
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+    </head>
+    <body background="../hexagonal.png">
+        <div class="four"><h1>Продажа акций</h1></div><br><br>
+        <form action="../scripts/sell_script.php" method="POST">
+        <div class="center">
+            <label for="wallet_id"><font size="5" color="orange">Номер InterCoin кошелька</font></label><br><br>
+            <input type="password" id="wallet_id" name="wallet_id"><br><br>
+            <label for="amount"><font size="5" color="orange">Количество акций</font></label><br><br>
+            <input type="number" id="amount" name="amount"><br><br>
+            <input type="submit" class="knopka"><br><br>
+            <a href="../index.php" class="knopka">На главную</a>
+        </div>
+        </form>
+    </body>
+</html>

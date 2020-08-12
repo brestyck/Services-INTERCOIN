@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            var params = window
+            .location
+            .search
+            .replace('?','')
+            .split('&')
+            .reduce(
+                function(p,e){
+                    var a = e.split('=');
+                    p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                    return p;},{});
+            function view(){
+                alert("Количество ваших акций: "+params["amount"]);
+            }
+        </script>
+        <title>Мои активы</title>
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css-content/gurman.css">
+    </head>
+    <body background="../hexagonal.png">
+        <div class="four"><h1>Мои акции</h1></div>
+        <br><br>
+        <div class="center">
+        <button class="knopka" onclick="view()">Просмотреть акции</button></div><br><br><br>
+        <div class="center">
+        <a href="../index.php" class="knopka">На главную</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>INTERCOIN</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+        <link rel="stylesheet" href="lcab/refstyle.css">
+    </head>
+    <body background="back.png">
+        <script>
+            var params = window
+                .location
+                .search
+                .replace('?','')
+                .split('&')
+                .reduce(
+                    function(p,e){
+                        var a = e.split('=');
+                        p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                        return p;
+                    },
+                    {}
+                );
+            function bt(){
+                location.href = params["from"];
+            }
+        </script>
+        <div class="center"><div class="one"><h1>Ошибка</h1></div></div>
+        <div class="header-h1"><h2>Данные были введены неверно!</h2></div>
+        <div class="center"><button class="userbutton" onclick="bt()">Назад</button></div>
+    </body>
+</html>

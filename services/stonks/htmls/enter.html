@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script>
+                var params = window
+            .location
+            .search
+            .replace('?','')
+            .split('&')
+            .reduce(
+                function(p,e){
+                    var a = e.split('=');
+                    p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                    return p;},{});
+            function show_current_price(){
+                alert("Текущая цена за акцию: "+params["price"]+" IC");
+            }
+            function buy_redirect(){
+                location.href="buy.html?price="+params["price"];
+            }
+            function sell_redirect(){
+                location.href="sell.html?price="+params["price"];
+            }
+            </script>
+        <title>Биржа акций</title>
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css-content/gurman.css">
+    </head>
+    <body background="../hexagonal.png">
+        <div class="center">
+        <div class="four"><h1>Биржа акций</h1></div><br>
+        <button class="knopka" onclick="show_current_price()">Текущий курс</button><br><br><br>
+        <a href="graph.html" class="knopka">График курса</a><br><br><br>
+        <button class="knopka" onclick="buy_redirect()">Купить акции</button><br><br>
+        <button class="knopka" onclick="sell_redirect()">Продать акции</button><br><br><br>
+        <a href="my-actives.html" class="knopka">Мои акции</a><br><br><br><br>
+        <a href="../../index.html" class="knopka">На главную</a>
+        </div>
+    </body>
+</html>

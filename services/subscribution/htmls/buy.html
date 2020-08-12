@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Покупка подписки</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="height=device-height,width=device-width,user-scalable=yes">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body background="../css/back.png">
+        <div class="center">
+            <div class="action"><h2>Оформление</h2></div><br><br>
+            <form action="../scripts/buy.php" method="POST">
+                <label for="wallet_id"><font size="5" color="yellow">Номер InterCoin кошелька</font></label><br><br>
+                <input type="password" name="wallet_id" id="wallet_id"><br><br>
+                <label for="basic"><font size="5" color="yellow">Базовая(4 часа, 4000 IC)</font></label>
+                <input type="radio" name="type" id="basic" value="basic"><br><br>
+                <label for="normal"><font size="5" color="yellow">Улучшенная (6 часов, 7000 IC)</font></label>
+                <input type="radio" name="type" id="normal" value="normal"><br><br>
+                <label for="pro"><font size="5" color="orange">Про (12 часов, 10000 IC)</font></label>
+                <input type="radio" name="type" id="pro" value="pro"><br><br>
+                <input type="submit" class="b">
+            </form>
+        </div>
+    </body>
+</html>
